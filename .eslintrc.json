@@ -1,6 +1,12 @@
  {
-  "extends" : "google",
-  "rules" : {}
+  "extends" : "google",  
+  "parserOptions": {
+    "ecmaVersion": 6
+ }, 
+ "rules" : {
+    "linebreak-style" : [2,"windows"]
+  }
 }
 
 // npm install --save-dev eslint eslint-config-google
+// global install eslint to use the --fix functionality 
