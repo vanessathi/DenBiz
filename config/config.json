@@ -9,18 +9,18 @@
     },
     "test": {
       "username": "root",
-      "password": null,
+      "password": "K!rby0414",
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 3308,
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
-      "password": null,
+      "password": "K!rby0414",
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 3308,
       "dialect": "mysql"
     }
   }
