@@ -1,48 +1,92 @@
-//insert navabar
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Your Business</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
 
+<body>
+  <section class="registration">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explore</a>
+          </li>
+        </ul>
+    
+    <!-- nav bar search form -->
+        <form class="form-inline my-2 my-lg-0" id="searchForm">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Small Business" aria-label="Search">
+          <button class="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
+        </form>
+      </div>
+  </section>
+  <br>
+  <h1 class="headerRegister">Register Your Business</h1>
 
+  <div class="container">
 
-//insert form
-
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Business Name</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Phone Number</label>
-      <input type="phone-number" class="form-control" id="inputPassword4">
-    </div>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Business Name</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="phoneNumber" class="form-control" id="inputPassword4">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="websiteUrl">Website URL</label>
+        <input type="text" class="form-control" id="websiteUrl" placeholder="localbusiness.com">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St.">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputType">Select Business Type</label>
+          <select id="inputType" class="form-control">
+            <option selected>Choose...</option>
+            <option>Restaraunt</option>
+            <option>Automotive</option>
+            <option>Beauty</option>
+            <option>Farm+Garden</option>
+            <option>Real Estate</option>
+            <option>Financial</option>
+            <option>Fitness</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btnRegister">Register Business</button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Website URL</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="localbusiness.com">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St.">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState"></label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>Restaraunt</option>
-        <option>Automotive</option>
-        <option>Beauty</option>
-        <option>Farm+Garden</option>
-        <option>Real Estate</option>
-        <option>Financial</option>
-        <option>Fitness</option>
-      </select>
-    </div>
-  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
 
- <button type="submit" class="btn btn-primary">Register Business</button>
-</form>
+</html>
