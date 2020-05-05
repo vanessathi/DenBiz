@@ -2,30 +2,30 @@
 module.exports = function(sequelize, DataTypes) {
   const smallBis = sequelize.define('smallBis', {
     text: {
-      name: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 140],
       },
     },
     address: {
-      name: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     contactNumber: {
-      name: DataTypes.String,
+      type: DataTypes.STRING,
       validate: {
         len: [9, 10],
       },
     },
     email: {
-      name: DataTypes.String,
+      type: DataTypes.STRING,
     },
     website: {
-      name: DataTypes.String,
+      type: DataTypes.STRING,
     },
-    type: {
-      name: DataTypes.String,
+    category: {
+      type: DataTypes.STRING,
     },
   });
   return smallBis;
