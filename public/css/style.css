@@ -1,4 +1,25 @@
-
+* {
+    box-sizing: border-box;
+    
+ }
+ 
+ html {
+    overflow-y: scroll;
+    min-height: 100%;
+   background-size: cover !important;
+   background-image: url("projectbackground.jpg");
+     
+ }
+body { 
+    
+    overflow-y: scroll;
+    min-height: 100%;
+   background-size: cover !important;
+   background-image: url("projectbackground.jpg");
+}
+.container {
+    
+}
 h1 {
     text-align: center;
     padding-top: 20px;
@@ -6,7 +27,12 @@ h1 {
     font-size: 40px;
 }
 
-.registraion {
+.registration {
+    
+    
+}
+.register {
+    font-size: 22px;
     
 }
 
@@ -19,15 +45,16 @@ h1 {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    margin-bottom: 30px;
   }
 
 .btnRegister:hover {background-color: #3e8e41}
 
-.btnRegister:active {
+/* .btnRegister:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+} */
     
 
 
