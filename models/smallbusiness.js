@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   const smallBis = sequelize.define('smallBis', {
-    text: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -25,6 +25,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
     category: {
+      type: DataTypes.STRING,
+    },
+    city: {
       type: DataTypes.STRING,
     },
   });
