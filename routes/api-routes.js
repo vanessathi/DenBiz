@@ -21,7 +21,8 @@ module.exports = function(app) {
   });
 
   app.post('/api/smallbusiness', function(req, res) {
-    db.smallbusiness.create(req.body).then(function(dbsmallbusiness) {
+    console.log(req.body)
+    db.smallBis.create(req.body).then(function(dbsmallbusiness) {
       res.json(dbsmallbusiness);
     });
   });
