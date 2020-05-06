@@ -1,14 +1,12 @@
 const db = require('../models');
 
 module.exports = function(app) {
-  // app.get('/api/smallbusiness', function(req, res) {
-  //   db.smallbusiness.findAll({
-  //     include: [db.Post],
+  // app.get('/', function(req, res) {
+  //   db.smallBis.findAll({
   //   }).then(function(dbsmallbusiness) {
-  //     res.json(dbsmallbusiness);
+  //     res.render('index', dbsmallbusiness);
   //   });
   // });
-
   app.get('/api/smallbusiness/:name', function(req, res) {
     db.smallBis.findOne({
       where: {
