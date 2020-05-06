@@ -9,20 +9,19 @@ module.exports = function(app) {
   //   });
   // });
 
-  // app.get('/api/smallbusiness/:id', function(req, res) {
-  //   db.smallbusiness.findOne({
-  //     where: {
-  //       id: req.params.id,
-  //     },
-  //     include: [db.Post],
-  //   }).then(function(dbsmallbusiness) {
-  //     res.json(dbsmallbusiness);
-  //   });
-  // });
+  app.get('/api/smallbusiness/:name', function(req, res) {
+    db.smallBis.findOne({
+      where: {
+        name: req.params.name,
+      },
+    }).then(function(smallbusiness) {
+      res.json(smallbusiness);
+    });
+  });
   app.post('/api/smallbusiness', function(req, res) {
     console.log(req.body);
-    db.smallBis.create(req.body).then(function(dbsmallbusiness) {
-      res.json(dbsmallbusiness);
+    db.smallBis.create(req.body).then(function(smallBusiness) {
+      res.json(smallBusiness);
     });
   });
 
