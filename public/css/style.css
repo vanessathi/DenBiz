@@ -55,3 +55,75 @@ nav {
   }
   
   
+* {
+    box-sizing: border-box;
+    
+ }
+ 
+ html {
+    overflow-y: scroll;
+    min-height: 100%;
+   background-size: cover !important;
+   background-image: url("projectbackground.jpg");
+     
+ }
+body { 
+    
+    overflow-y: scroll;
+    min-height: 100%;
+   background-size: cover !important;
+   background-image: url("projectbackground.jpg");
+}
+.container {
+    
+}
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+.registration {
+    
+    
+}
+.register {
+    font-size: 22px;
+    
+}
+
+.btnRegister {
+    background: yellow;
+    font-size: 150%;
+    margin: 0;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-bottom: 30px;
+  }
+
+.btnRegister:hover {background-color: #3e8e41}
+
+/* .btnRegister:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+    
+
+
+
+
+@media screen and (max-width:800px) {
+    .left, .main, .right {
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .container {
+        width: 100%;
+        padding-left:10px;
+        padding-right:10px;
+    }
+  }

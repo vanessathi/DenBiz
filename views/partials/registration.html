@@ -1,9 +1,50 @@
-//insert navabar
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Your Business</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
 
+<body>
+  <section class="registration">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explore</a>
+          </li>
+        </ul>
+    
+    <!-- nav bar search form -->
+        <form class="form-inline my-2 my-lg-0" id="searchForm">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Small Business" aria-label="Search">
+          <button class="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
+        </form>
+      </div>
+  </section>
+  
+  <h1 class="headerRegister">Register Your Business</h1>
+  
+  <div class="container">
 
-
-//insert form
 
 <form>
   <div class="form-row">
@@ -33,7 +74,7 @@
       <label for="inputState"></label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
-        <option>Restaraunt</option>
+        <option>Restaurant</option>
         <option>Automotive</option>
         <option>Beauty</option>
         <option>Farm+Garden</option>
@@ -43,6 +84,8 @@
       </select>
     </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../../public/js/registration.js"></script>
+</body>
 
- <button type="submit" class="btn btn-primary">Register Business</button>
-</form>
+</html>

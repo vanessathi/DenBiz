@@ -9,7 +9,7 @@ USE smallbusiness;
 -- CREATE TABLE smallbusiness (
     -- id auto increment 
     -- Name Varchar
-    -- Adderess 
+    -- Address 
     -- Contact Number
     -- Email
     -- Website Link
