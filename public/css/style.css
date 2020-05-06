@@ -1,25 +1,5 @@
-* {
-    box-sizing: border-box;
-    
- }
- 
- html {
-    overflow-y: scroll;
-    min-height: 100%;
-   background-size: cover !important;
-   background-image: url("projectbackground.jpg");
-     
- }
-body { 
-    
-    overflow-y: scroll;
-    min-height: 100%;
-   background-size: cover !important;
-   background-image: url("projectbackground.jpg");
-}
-.container {
-    
-}
+
+
 h1 {
     text-align: center;
     padding-top: 20px;
@@ -27,10 +7,6 @@ h1 {
     font-size: 40px;
 }
 
-.registration {
-    
-    
-}
 .register {
     font-size: 22px;
     
@@ -46,6 +22,7 @@ h1 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin-bottom: 30px;
+    border: none;
   }
 
 .btnRegister:hover {background-color: #3e8e41}
