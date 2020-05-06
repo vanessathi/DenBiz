@@ -10,21 +10,23 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link rel="stylesheet" href="/public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="registrationPage">
   <nav class="navbar navbar-expand-lg bg-dark static-top mb-5 shadow">
     <div class="container">
       <a class="navbar-brand" href="#">DENBIZ</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto font-weight-light font-italic text-white">
           <li class="nav-item active">
             <a class="nav-link" href="#">home
-                  <span class="sr-only">(current)</span>
-                </a>
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">register</a>
@@ -36,20 +38,25 @@
       </div>
     </div>
   </nav>
-  
-  <h1 class="headerRegister">Register Your Business</h1>
-  
-  <div class="container">
 
+  <div class="registrationHeader">
+    <div class="container">
+      <h1 class="headerRegister">Register Your Business</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="registrationInfo">Provide your Denver business information below to be added to our directory.<br>You may
+      have the chance to be featured on our homepage!</h2>
     <form class="register">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="businessName">Business Name</label>
-          <input type="email" class="form-control" id="businessName">
+          <input type="text" class="form-control" id="businessName">
         </div>
         <div class="form-group col-md-6">
           <label for="phoneNumber">Phone Number</label>
-          <input type="phoneNumber" class="form-control" id="inputContact">
+          <input type="text" class="form-control" id="inputContact">
         </div>
       </div>
       <div class="form-group">
@@ -62,7 +69,7 @@
       </div>
       <div class="form-group">
         <label for="inputAddress">Email</label>
-        <input type="text" class="form-control" id="inputEmail" placeholder="1234 Main St.">
+        <input type="email" class="form-control" id="inputEmail" placeholder="mikelowry@badboyz.com">
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -87,6 +94,13 @@
       <button type="submit" class="btnRegister">Register Business</button>
     </form>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2020 Team Top Developers at University of Denver</p>
+    </div>
+  </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="../../public/js/registration.js"></script>
 </body>
