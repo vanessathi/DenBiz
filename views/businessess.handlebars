@@ -1,0 +1,24 @@
+<h1>Local Denver Businesses</h1>
+
+{{#each smallBis}}
+<div class="card-deck">
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{category}}</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{companyDescription}}</p>
+  </div>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{address}}</li>
+    <li class="list-group-item">{{contactNumber}}</li>
+    <li class="list-group-item">{{email}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#{{website}}" class="card-link">Website</a>
+  </div>
+</div>
+</div>
+</div>
+{{/each}}
+
+
