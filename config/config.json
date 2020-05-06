@@ -1,26 +1,34 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": "rootroot",
+=======
+      "password": "root",
+>>>>>>> master
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 8889,
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
+<<<<<<< HEAD
       "password": "rootroot",
+=======
+      "password": "root",
+>>>>>>> master
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 8889,
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
-      "password": "1thoigi@n",
+      "password": "root",
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 8889,
       "dialect": "mysql"
     }
   }
