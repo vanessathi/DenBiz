@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const name = S('');
+  const name = $('');
   const address = $('');
   const contact = $('');
   const email = $('');
