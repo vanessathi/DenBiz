@@ -1,10 +1,12 @@
 $(document).ready(function() {
-  $('#searchform').on('submit', handleFormSubmit);
+  const search = $('#searchform');
+  $('#searchform').on('submit', find(search));
   /**
    * Represent the event that occurs after a form is clicked
-   * @param {string} event - What occurs after form is submitted
+   * @param {string} category - What occurs after form is submitted
    */
-  function handleFormSubmit(event) {
+  function find(category) {
     event.preventDefault();
-  }
+    $.get('/api/smallbusiness/' + category);
+  };
 });
