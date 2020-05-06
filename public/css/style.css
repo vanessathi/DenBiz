@@ -1,3 +1,5 @@
+
+
 html, body {
     height:100%;
 } 
@@ -8,6 +10,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Quicksand', sans-serif !important;
+    /* color:#203346; */
 
     /* background: #5bc4c4;
     background: -webkit-linear-gradient(to right, #5bc4c4, #19547b);
@@ -53,71 +57,89 @@ nav {
     border-radius: 0;
     padding-left: 0;
   }
-  
-  
-* {
-    box-sizing: border-box;
-    
- }
- 
- html {
-    overflow-y: scroll;
-    min-height: 100%;
-   background-size: cover !important;
-   background-image: url("projectbackground.jpg");
-     
- }
-body { 
-    
-    overflow-y: scroll;
-    min-height: 100%;
-   background-size: cover !important;
-   background-image: url("projectbackground.jpg");
-}
-.container {
-    
-}
-h1 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 40px;
+
+  /* REGISTRATION PAGE */
+.registrationPage {
+  background-image:none !important;
 }
 
-.registration {
-    
-    
+.mb-5 {
+  margin-bottom: 0 !important;
 }
+
+/*HERO IMAGE*/
+.registrationHeader {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(to bottom right, rgba(38, 128, 167, 0.8), rgba(147, 200, 211, .8) ), url(registrationPic.jpg) no-repeat center center !important;
+  margin-bottom: 60px;
+}
+
+.headerRegister {
+  text-align: center;
+  color: white;  
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/*REGISTRATION FORM*/
+.registrationInfo {
+  text-align: center;
+  font-size: 24px;
+  color:#203346;
+}
+
+.register .form-control:focus {
+  box-shadow: none;
+  margin-bottom: 0;
+  border-color:	#ac7c73;
+}
+
+.register label {
+  color: #2680a7;
+  font-weight: bold;
+}
+
 .register {
-    font-size: 22px;
-    
+    font-size: 18px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+}
+.register input {
+  color:#203346;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btnRegister {
-    background: yellow;
+    background:#2680a7;
     font-size: 150%;
-    margin: 0;
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
     margin-bottom: 30px;
+    border: none;
+    border-radius:100px;
+    padding: 5px 20px;
+    color: white;
+    font-weight: bold !important;
+    font-family: 'Quicksand', sans-serif;
   }
 
-.btnRegister:hover {background-color: #3e8e41}
+.btnRegister:hover {
+  background-color: #203346;
+  transition: ease-in .15s;
+}
 
-/* .btnRegister:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-} */
-    
+/*FOOTER*/
+footer {
+  padding:30px;
+  border-top:1px solid #2680a7;
+}
 
-
-
-
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
     .left, .main, .right {
       width:100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
@@ -125,5 +147,9 @@ h1 {
         width: 100%;
         padding-left:10px;
         padding-right:10px;
+    }
+    /*width of registration form for tablet and mobile*/
+    .register {
+      width:100%;
     }
   }
