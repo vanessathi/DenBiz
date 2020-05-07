@@ -59,7 +59,7 @@ function initMap(lat, long) {
     map: map,
   });
   const infoWindow = new google.maps.InfoWindow({
-    content:'name'
+    content: 'name',
   });
   marker.addListener('click', function() {
     infoWindow.open(map, marker);
