@@ -30,6 +30,9 @@ module.exports = function(sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
     },
+    description: {
+      type: DataTypes.TEXT,
+    },
   });
   return smallBis;
 };
