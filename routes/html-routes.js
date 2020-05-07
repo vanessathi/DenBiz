@@ -18,7 +18,7 @@ module.exports = function(app) {
   app.get('/business', (req, res) => {
     db.smallBis.findAll()
         .then(function(data) {
-          res.render('index', data);
+          res.render('business', data);
         });
   });
 };
