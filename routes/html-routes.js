@@ -18,9 +18,11 @@ module.exports = function(app) {
   app.get('/business', (req, res) => {
     db.smallBis.findAll()
         .then(function(data) {
+          console.log(data.length);
           const results = [];
           for (let i = 0; i < data.length; i++) {
             results.push(data[i].dataValues);
+            if (i === data.length) break;
           }
           console.log(results);
           res.render('business', {key: results});
