@@ -1,11 +1,7 @@
 {
     "development": {
       "username": "root",
-<<<<<<< HEAD
       "password": "rootroot",
-=======
-      "password": "root",
->>>>>>> master
       "database": "smallbusiness",
       "host": "127.0.0.1",
       "port": 8889,
@@ -13,11 +9,7 @@
     },
     "test": {
       "username": "root",
-<<<<<<< HEAD
       "password": "rootroot",
-=======
-      "password": "root",
->>>>>>> master
       "database": "smallbusiness",
       "host": "127.0.0.1",
       "port": 8889,
