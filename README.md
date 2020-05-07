@@ -1,26 +1,46 @@
-# Small Business Database Group Project
+# Mile High
 
 ## Overview
-This full-stack web applicationYou and your team will design and build an app using the MVC paradigm and your own server-side API. You will also continue to add to your professional repertoire with testing, continuous integration and linting tools.
+This full-stack web application was a group collaboration of design and functioning using the MVC paradigm and our own server-side API. 
 
-## Key Topics
-* Linting via ES Lint
-* Continuous integration
+## User Story
+As a Denver area small business owner, I will utilize this application to list my business and services to gain exposure and connect with potential customers. 
+As a Denverite, I will search for small businesses of my interest, so I can support the local community.
+
+## Authors
+
+* Tyler Collins
+* Vanessa Pham
+* Sonia Trimble
+* Andrew Werner
+
+## Dependencies
+
+* ES Lint
+* Google Maps API
+* NPM installations
+
+## Technology
+
+* Front End
+    * CSS and Bootstrap
+    * JavaScript 
+    * jQuery
+
+* Back End
+    * Node.js
+    * Sequelize
+    * Express
+    * Express Handlebars
+ 
+
+## Team Wins
+
+* Utilized TDD to connect all front end and back end framework 
+* Configured linting via ES Lint
+* Designed, built and deployed a full-stack web application to Heroku
 * Testing via Jest Test
 
-## Comprehension Check
-You will be employer-ready if you can answer the following questions:
-1. Why is TDD?
-2. What is linting?
-3. What is continuous integration?
+## Further Work
 
-## Learning Objectives
-You will be employer-competitive if you are able to:
-* Configure linting and continuous integration with Travis CI.
-* Explain and implement unit tests
-* Design, build and deploy a full-stack web application to Heroku
 
-## Helpful Links
-[Mocha JS Docs](https://mochajs.org/)
-[Chai JS Docs](https://www.chaijs.com/)
-[Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)

@@ -1,20 +1,24 @@
-$(document).ready(function() {
-  const name = $('');
-  const address = $('');
-  const contact = $('');
-  const email = $('');
-  const website = $('');
-  const type = $('');
-  $('#addform').on('submit', handleFormSubmit);
-  /**
-  * Represent the event that occurs after a form is clicked
-  * @param {string} event - What occurs after form is submitted
-  */
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    // If there is no name input stop the add function
-    if (!name.val().trim()) {
-      return;
-    };
+const next = $('#next');
+const previous = $('#previous');
+const deleteBtn = $('#delete');
+let pageNumber = 0;
+
+next.on('click', () =>{
+  pageNumber ++;
+  $.get('/api/business', pageNumber)
+      .then(console.log('I worked' + pageNumber));
+});
+
+previous.on('click', () => {
+  if (pageNumber > 0) {
+    pageNumber --;
   }
+  $.get('/api/business', pageNumber)
+      .then(console.log('I worked' + pageNumber));
+});
+
+deleteBtn.on('click', () => {
+  const id = $(this).data;
+  $.delete('/api/smallbusiness/' + id)
+      .then(location.reload());
 });
