@@ -152,6 +152,12 @@ body {
   transition: ease-in .15s;
 }
 
+#map {
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+}
+
 /*FOOTER*/
 footer {
   padding:30px;
