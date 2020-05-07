@@ -5,7 +5,8 @@ $(document).ready(function() {
   const email = $('#inputEmail');
   const website = $('#websiteUrl');
   const type = $('#inputType');
-  const city =$('#inputCity');
+  const city = $('#inputCity');
+  const description = $('#description');
   $('.register').on('submit', handleFormSubmit);
   /**
    * Represent the event that occurs after a form is clicked
@@ -24,6 +25,7 @@ $(document).ready(function() {
       website: website.val().trim(),
       category: type.val(),
       city: city.val().trim(),
+      description: description.val().trim(),
     });
     /**
      * Function for inserting data in to the smallbusiness table
@@ -31,7 +33,7 @@ $(document).ready(function() {
      */
     function insertData(businessData) {
       $.post('/api/smallbusiness', businessData)
-          .then(console.log('it worked'));
+          .then(location.reload());
     }
   }
 });
