@@ -3,7 +3,7 @@ html, body {
 } 
 
 body {
-    background: url('https://i.imgur.com/ohtr4Dd.png') no-repeat center center fixed;
+    background: url('https://i.imgur.com/ohtr4Dd.png') no-repeat bottom center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -156,6 +156,48 @@ body {
 footer {
   padding:30px;
   border-top:1px solid #203346;
+  background-color: #203346;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer p{
+  margin-bottom: 0;
+}
+
+/* BUSINESS PAGE */
+.businessHeader {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(to bottom right, rgba(38, 128, 167, 0.4), rgba(147, 200, 211, .4) );
+  margin-bottom: 60px;
+}
+
+.headerBusiness {
+  text-align: center;
+  color: #203346;  
+  font-size: 60px;
+  font-weight: bold;
+}
+h6.cardType {
+  color: #9099a3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+h3.card-title {
+  color: #2680a7;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+h4.card-text {
+  font-size: 18px;
+  height: 150px;
 }
 
 @media screen and (max-width: 1087px) {
@@ -170,8 +212,8 @@ footer {
     }
     .container {
         width: 100%;
-        padding-left:10px;
-        padding-right:10px;
+        padding-left:14px;
+        padding-right:14px;
     }
     /*width of registration form for tablet and mobile*/
     .register {

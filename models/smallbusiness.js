@@ -32,6 +32,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
+      validate: {
+        len: [1, 200],
+      },
     },
   });
   return smallBis;
