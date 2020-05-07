@@ -14,4 +14,5 @@ USE smallbusiness;
     -- Email
     -- Website Link
     -- Type of business 
+    -- Description 
     -- )
