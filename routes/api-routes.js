@@ -7,6 +7,7 @@ module.exports = function(app) {
         name: req.params.name,
       },
     }).then(function(smallbusiness) {
+      console.log(smallbusiness)
       res.json(smallbusiness);
     });
   });

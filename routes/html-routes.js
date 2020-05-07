@@ -19,7 +19,7 @@ module.exports = function(app) {
     db.smallBis.findAll()
         .then(function(data) {
           const results = [];
-          for (let i = 0; i < 12; i++) {
+          for (let i = 0; i < data.length; i++) {
             results.push(data[i].dataValues);
           }
           console.log(results);
