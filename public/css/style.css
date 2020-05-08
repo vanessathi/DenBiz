@@ -1,3 +1,4 @@
+/* HOME PAGE */
 html, body {
     height:100%;
 } 
@@ -17,8 +18,14 @@ body {
 
   }
 
-.navbar {
-    
+  a {
+    color:#2680a7;
+  }
+  a:hover {
+    color:#93c8d3;
+  }
+  
+  .navbar {
     background-color: #203346 !important;
     box-shadow:none !important;
   }
@@ -38,7 +45,7 @@ body {
     height: auto;
 }
   .navbar .navbar-nav .nav-link {
-    color: whitesmoke;
+    color: white;
   }
   a.nav-link:hover {
     color:#93c8d3 !important;
@@ -49,25 +56,53 @@ body {
     color: white !important;
   }
 
-  /* .navbar:hover {
-    color: teal;
-  } */
+  /* HOME PAGE */
+  .headerHome {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: #203346;
+  }
+  .headerHome h1 {
+    
+     
+    font-size: 60px;
+    font-weight: bold;
+  }
 
+  .headerHome h2{
+    
+    
+    
+  }
+
+  .headerHome h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
   .image {
       width: 50%;
       align-self: center;
       padding: 10px;
   }
   
-  .businessOfTheWeek {
+.businessOfTheWeek {
       align-content: center;
-  }
+}
 
   /* search bar css */
+.input-group.mb-4.border.rounded-pill.p-1 {
+    background-color: white;
+}
+
+input#search {
+    background: transparent;
+}
 
 .form-control:focus {
     box-shadow: none;
     margin-bottom: -20px;
+
   }
   
 .form-control-underlined {
@@ -77,6 +112,18 @@ body {
     padding-left: 0;
   }
 
+a.exploreLink  {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.spotlightBiz h2 {
+  text-align: center;
+  color: #203346 !important;
+
+}
+
+
   /* REGISTRATION PAGE */
 .registrationPage {
   background-image:none !important;
@@ -85,6 +132,7 @@ body {
 .mb-5 {
   margin-bottom: 0 !important;
 }
+
 
 /*HERO IMAGE*/
 .registrationHeader {
@@ -101,7 +149,12 @@ body {
   font-weight: bold;
 }
 
+
 /*REGISTRATION FORM*/
+.headerHome form {
+  width:80%;
+  margin:0 auto;
+}
 .registrationInfo {
   text-align: center;
   font-size: 24px;
@@ -145,27 +198,13 @@ body {
     color: white;
     font-weight: bold !important;
     font-family: 'Quicksand', sans-serif;
-  }
+}
 
 .btnRegister:hover {
   background-color: #203346;
   transition: ease-in .15s;
 }
 
-/*FOOTER*/
-footer {
-  padding:30px;
-  border-top:1px solid #203346;
-  background-color: #203346;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-}
-
-footer p{
-  margin-bottom: 0;
-}
 
 /* BUSINESS PAGE */
 .businessHeader {
@@ -181,6 +220,17 @@ footer p{
   font-size: 60px;
   font-weight: bold;
 }
+
+.pagination a {
+  color:#2680a7 !important; 
+}
+
+.pagination a:hover {
+  color:#93c8d3 !important;
+}
+
+
+/* CARD STYLE */
 h6.cardType {
   color: #9099a3;
   text-transform: uppercase;
@@ -198,11 +248,83 @@ h3.card-title {
 h4.card-text {
   font-size: 18px;
   height: 150px;
+  color: #203346;
+}
+h5.cardInfo {
+  font-size:16px;
+  color: #203346;
+}
+
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+  
+
+}
+.cardDivider {
+  border: .5px solid #9099a3 !important;
+}
+
+button#delete {
+  font-size: 18px;
+}
+
+
+.fa-map-marker-alt{
+  margin-right: 4px;
+  height: auto;
+}
+
+.fa-phone-volume {
+  margin-right: 4px;
+  height: auto;
+}
+
+.fa-envelope {
+  margin-right: 4px;
+  height: auto;
+}
+
+.alert-dismissible {
+  padding-right: 0rem;
+}
+
+.pagination .page-item {
+  
+}
+
+
+/*FOOTER*/
+footer {
+  padding:30px;
+  border-top:1px solid #203346;
+  background-color: #203346;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer p{
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) and (min-width:768px) {
+  h4.card-text {
+    height: 180px;
+  }
 }
 
 @media screen and (max-width: 1087px) {
   .navbar>.container {
       display: inherit;
+  }
+}
+@media screen and (max-width: 990px) and (min-width:556px) {
+  .col-sm-4 {
+    flex:0 0 50%;
+    max-width:50%;
   }
 }
 
@@ -218,5 +340,12 @@ h4.card-text {
     /*width of registration form for tablet and mobile*/
     .register {
       width:100%;
+    }
+    .col-sm-4 {
+      flex:0 0 100%;
+      max-width:100%;
+    }
+    h1 {
+      font-size:34px !important;
     }
   }
