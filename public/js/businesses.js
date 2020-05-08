@@ -1,31 +1,20 @@
 const next = $('#next');
 const previous = $('#previous');
 const deleteBtn = $('.close');
-let pageNumber = 0;
+let pageNumber = localStorage.getItem("pgNum") || 0;
 
 next.on('click', () =>{
   event.preventDefault();
   pageNumber ++;
-  $.ajax({
-    method: 'GET',
-    url: '/api/business/' + pageNumber,
-  }).then((data) => {
-    console.log('success');
-  });
+  renderPage(pageNumber);
 });
 
 previous.on('click', () => {
   event.preventDefault();
-  if (pageNumber > 1) {
+  if (pageNumber > 0) {
     pageNumber --;
   }
-  $.ajax({
-    method: 'GET',
-    url: '/api/business/' + pageNumber,
-  }).then((data) => {
-    console.log(data);
-    render('business', data);
-  });
+  renderPage(pageNumber);
 });
 
 deleteBtn.on('click', (event) => {
@@ -35,10 +24,19 @@ deleteBtn.on('click', (event) => {
   $.ajax({
     method: 'DELETE',
     url: '/api/smallbusiness/' + id,
-  }).then($.ajax({
-    method: 'GET',
-    url: '/api/business/' + pageNumber,
-  }).then(console.log('worked'))
-  );
+  }).then(renderPage(pageNumber));
 });
-
+/**
+ * A function to trigger new page
+ * @param {number} pageNum
+ */
+function renderPage(pageNum) {
+  localStorage.setItem("pgNum", pageNumber);
+  console.log(pageNumber);
+  $.ajax({
+    method: 'GET',
+    url: '/business/' + pageNumber,
+  }).then((data) => {
+    console.log('worked');
+  });
+}
