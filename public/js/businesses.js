@@ -1,24 +1,45 @@
 const next = $('#next');
 const previous = $('#previous');
-const deleteBtn = $('#delete');
+const deleteBtn = $('.close');
 let pageNumber = 0;
 
 next.on('click', () =>{
+  event.preventDefault();
   pageNumber ++;
-  $.get('/api/business', pageNumber)
-      .then(console.log('I worked' + pageNumber));
+  $.ajax({
+    method: 'GET',
+    url: '/api/business/' + pageNumber,
+  }).then((data) => {
+    console.log(data);
+    render('business', data);
+  });
 });
 
 previous.on('click', () => {
-  if (pageNumber > 0) {
+  event.preventDefault();
+  if (pageNumber > 1) {
     pageNumber --;
   }
-  $.get('/api/business', pageNumber)
-      .then(console.log('I worked' + pageNumber));
+  $.ajax({
+    method: 'GET',
+    url: '/api/business/' + pageNumber,
+  }).then((data) => {
+    console.log(data);
+    render('business', data);
+  });
 });
 
-deleteBtn.on('click', () => {
-  const id = $(this).data;
-  $.delete('/api/smallbusiness/' + id)
-      .then(location.reload());
+deleteBtn.on('click', (event) => {
+  event.preventDefault();
+  const id = parseInt(event.target.id);
+  console.log(id);
+  $.ajax({
+    method: 'DELETE',
+    url: '/api/smallbusiness/' + id,
+  }).then($.ajax({
+    method: 'GET',
+    url: '/api/business/' + pageNumber,
+  }).then(console.log('worked'))
+  );
 });
+
