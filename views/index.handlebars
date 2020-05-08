@@ -1,4 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+<<<<<<< HEAD
+  <div class="container">
+    <a class="navbar-brand" href="/"><i class="fas fa-map-pin"></i>Mile High Meet</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registration">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/business">Explore</a>
+        </li>
+      </ul>
+=======
     <div class="container">
       <a class="navbar-brand" href="index.handlebars"><i class="fas fa-map-pin"></i>DENBIZ</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -18,15 +38,38 @@
           </li>
         </ul>
       </div>
+>>>>>>> master
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- start of search body -->
-  <div class="container">
-  <div class="row border-0 my-4">
+<!-- start of search body -->
+<div class="container">
+  <div class="headerHome">
+    <h1>Welcome to Mile High Meet!</h1>
+    <h2>Your ultimate directory of all businesses in Denver.</h2>
+    &nbsp;
+    <h3>Find any restaurant, bakery, home repair service, and more by using our search bar below.
+    </h3>
+    <!-- Custom rounded search bars with input group -->
+    <form action="submit">
+      <div class="input-group mb-4 border rounded-pill p-1">
+        <div class="input-group-prepend border-0">
+          <button id="searchform" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+        </div>
+        <input type="search" placeholder="Search by business name, e.g. Torchy's Tacos" aria-describedby="searchform"
+          id="search" class="form-control bg-none border-0">
+      </div>
+    </form>
+    <a class="exploreLink" href="/business">View all businesses instead</a>
+  </div>
+
+  {{!-- <div class="row border-0 my-4">
     <div class="col-lg-8 mx-auto">
       <h5 class="font-weight-light mb-4 font-italic text-white">explore denver small businesses</h5>
       <div class="bg-white p-4 rounded shadow">
+<<<<<<< HEAD
+=======
 
         <!-- Custom rounded search bars with input group -->
         <form id="submit"> 
@@ -38,11 +81,14 @@
           </div>
         </form>  
 
+>>>>>>> master
       </div>
     </div>
-  </div>
+  </div> --}}
 </div>
 
+<<<<<<< HEAD
+=======
 {{!-- new section --}}
  <div class="container">
   <div class="row border-0 my-4">
@@ -57,44 +103,51 @@
 </div>
 
   {{!-- new section --}}
+>>>>>>> master
 <div class="container">
-<div class="row border-0 my-5">
-    <div class="col-lg-8 mx-auto">
-        <h5 class="font-weight-light mb-4 font-italic text-white">small business spotlight</h5>
-            <div class="bg-white p-5 rounded shadow">
+  <div class="row border-0 my-5">
+    <div class="col-lg-8 mx-auto spotlightBiz">
+      <h2 class="">Small business spotlight</h2>
+      <div class="bg-white p-5 rounded shadow">
         <!-- business of the week -->
-  <div class="businessOfTheWeek card border-info mb-3 shadow">
-    {{!-- insert business name in card-header --}}
-    <div class="card-header">{{name}}</div>
-   <img class="image card-img-top" src="https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="shop local!">
-   <div class="card-body">
-     <h6 class="card-title">Business Classification: {{category}} </h6>
-     <p class="card-text">About {{name}}:</p>
-     <p class="card-text">{{companyDescription}}</p>
-     <p class="card-text"><small class="text-muted">Last updated: May 09 2020</small></p>
-   </div>
-   <div class="card-footer bg-transparent border-info"> 
-     <div class="container">
-             Address: {{address}} | Phone Number: {{contactNumber}}
-    </div>
-    <div class="container">
-             Website: {{website}} | Email: {{email}}
+        <div class="businessOfTheWeek card border-info mb-3 shadow">
+          {{!-- insert business name in card-header --}}
+          <div class="card-header">{{name}}</div>
+          <img class="image card-img-top"
+            src="https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+            alt="shop local!">
+          <div class="card-body">
+            <h6 class="card-title">Business Classification: {{category}} </h6>
+            <p class="card-text">About {{name}}:</p>
+            <p class="card-text">{{companyDescription}}</p>
+            <p class="card-text"><small class="text-muted">Last updated: May 09 2020</small></p>
+          </div>
+          <div class="card-footer bg-transparent border-info">
+            <div class="container">
+              Address: {{address}} | Phone Number: {{contactNumber}}
+            </div>
+            <div class="container">
+              Website: {{website}} | Email: {{email}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of business of the week card -->
     </div>
   </div>
 </div>
-</div>
-<!-- end of business of the week card -->
-      </div>
-    </div>
-</div>
 
 <footer>
-    <div class="container">
-      <p>&copy; 2020 Team Top Developers at University of Denver</p>
-    </div>
+  <div class="container">
+    <p>&copy; 2020 Team Top Developers at University of Denver</p>
+  </div>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<<<<<<< HEAD
+<script src="/js/index.js"></script>
+=======
 <script src="/js/index.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEFrSt4UG74zSBehlkzl7bMYQdOUBEhkM&callback=initMap"></script>
 
+>>>>>>> master
