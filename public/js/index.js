@@ -48,10 +48,6 @@ function geolocation(location, city) {
  * @param {number} lng
  */
 function initMap(lat, lng) {
-  const script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCEFrSt4UG74zSBehlkzl7bMYQdOUBEhkM&callback=initMap';
-  script.defer = true;
-  script.async = true;
   const coords = {
     lat: parseFloat(lat),
     lng: parseFloat(lng),
@@ -59,7 +55,7 @@ function initMap(lat, lng) {
   console.log(coords);
   // Denver Coords: 39.7392° N, 104.9903° W - Use for center if we use a marker
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 18,
     center: coords,
   });
 }

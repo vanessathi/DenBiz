@@ -10,8 +10,7 @@ next.on('click', () =>{
     method: 'GET',
     url: '/api/business/' + pageNumber,
   }).then((data) => {
-    console.log(data);
-    render('business', data);
+    console.log('success');
   });
 });
 

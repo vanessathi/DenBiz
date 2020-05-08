@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
   <div class="container">
-    <a class="navbar-brand" href="index.handlebars"><i class="fas fa-map-pin"></i>DENBIZ</a>
+    <a class="navbar-brand" href="/"><i class="fas fa-map-pin"></i>Mile High Meet</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav  ml-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="index.handlebars">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="registration">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="business.handlebars">Explore<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/business">Explore<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
@@ -29,7 +29,25 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
 
+<<<<<<< HEAD
+      {{#each key}}
+      <div class="col-sm-4">
+        <div class="card alert-dismissible">
+          <div class="card-body">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="delete">x</button>
+            <h6 class="cardType">{{category}}</h6>
+            <h3 class="card-title">{{name}}</h3>
+            <h4 class="card-text">{{description}}</h4>
+            <hr class="cardDivider">
+            <h5 class="cardInfo"><i class="fas fa-map-marker-alt"></i>{{address}}</h5>
+            <h5 class="cardInfo"><i class="fas fa-phone-volume"></i>{{contactNumber}}</h5>
+            <h5 class="cardInfo"><i class="far fa-envelope"></i>{{email}}</h5>
+            <a href="{{website}}" class="cardInfo cardLink" target="_blank">{{website}}</a>
+          </div>
+=======
   {{!-- <div class="card-deck">
 <div class="card border-info mb-3" style="max-width: 18rem;">
   <div class="card-header">{{category}}</div>
@@ -64,20 +82,17 @@
           <h5 class="cardInfo">{{email}}</h5>
           <a href="{{website}}" class="cardInfo cardLink">Website</a>
           <a href="#" class="btn btn-primary">Go somewhere</a>
+>>>>>>> master
         </div>
       </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" id="previous" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" id="next" href="#">Next</a></li>
-  </ul>
-</nav>
-
-
-
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" id="previous" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" id="next" href="#">Next</a></li>
+      </ul>
+    </nav>
   </div>
 
   <footer>
