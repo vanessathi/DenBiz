@@ -1,15 +1,15 @@
 {
     "development": {
       "username": "root",
-      "password": "rootroot",
+      "password": "K!rby0414",
       "database": "smallbusiness",
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 3308,
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "rootroot",
+      "password": "1thoigi@n",
       "database": "smallbusiness",
       "host": "127.0.0.1",
       "port": 3306,
@@ -17,7 +17,7 @@
     },
     "production": {
       "username": "root",
-      "password": "rootroot",
+      "password": "1thoigi@n",
       "database": "smallbusiness",
       "host": "127.0.0.1",
       "port": 3306,

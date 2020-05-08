@@ -205,6 +205,29 @@ a.exploreLink  {
   transition: ease-in .15s;
 }
 
+<<<<<<< HEAD
+=======
+#map {
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+}
+
+/*FOOTER*/
+footer {
+  padding:30px;
+  border-top:1px solid #203346;
+  background-color: #203346;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer p{
+  margin-bottom: 0;
+}
+>>>>>>> master
 
 /* BUSINESS PAGE */
 .businessHeader {

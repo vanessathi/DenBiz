@@ -13,15 +13,19 @@
         <li class="nav-item">
           <a class="nav-link" href="registration">Register</a>
         </li>
+<<<<<<< HEAD
         <li class="nav-item active">
           <a class="nav-link" href="business">Explore<span class="sr-only">(current)</span></a>
+=======
+        <li class="nav-item">
+          <a class="nav-link" href="/business">Explore<span class="sr-only">(current)</span></a>
+>>>>>>> master
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<body class="businessPage">
 
 
   <div class="businessHeader">
@@ -33,6 +37,7 @@
   <div class="container">
     <div class="row">
 
+<<<<<<< HEAD
       {{#each key}}
       <div class="col-sm-4">
         <div class="card alert-dismissible">
@@ -47,6 +52,42 @@
             <h5 class="cardInfo"><i class="far fa-envelope"></i>{{email}}</h5>
             <a href="{{website}}" class="cardInfo cardLink" target="_blank">{{website}}</a>
           </div>
+=======
+  {{!-- <div class="card-deck">
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{category}}</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{description}}</p>
+  </div>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{address}}</li>
+    <li class="list-group-item">{{contactNumber}}</li>
+    <li class="list-group-item">{{email}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="{{website}}" class="card-link">Website</a>
+  </div>
+</div>
+</div>
+</div> --}}
+  <div class="row container">
+
+    {{#each key}}
+    <div class="col-sm-4">
+      <div class="card alert-dismissible">
+        <div class="card-body">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" id = {{id}} >X</button>
+          <h6 class="cardType">{{category}}</h6>
+          <h3 class="card-title">{{name}}</h3>
+          <h4 class="card-text">{{description}}</h4>
+          <hr>
+          <h5 class="cardInfo">{{address}}</h5>
+          <h5 class="cardInfo">{{contactNumber}}</h5>
+          <h5 class="cardInfo">{{email}}</h5>
+          <a href="{{website}}" class="cardInfo cardLink">Website</a>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+>>>>>>> master
         </div>
       </div>
       {{/each}}
@@ -65,4 +106,5 @@
     </div>
   </footer>
 
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/businesses.js"></script>
