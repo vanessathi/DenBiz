@@ -205,8 +205,6 @@ a.exploreLink  {
   transition: ease-in .15s;
 }
 
-<<<<<<< HEAD
-=======
 #map {
   width: 400px;
   height: 400px;
@@ -227,7 +225,6 @@ footer {
 footer p{
   margin-bottom: 0;
 }
->>>>>>> master
 
 /* BUSINESS PAGE */
 .businessHeader {
