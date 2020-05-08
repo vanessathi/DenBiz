@@ -1,7 +1,7 @@
 const next = $('#next');
 const previous = $('#previous');
 const deleteBtn = $('.close');
-let pageNumber = localStorage.getItem("pgNum") || 0;
+let pageNumber = localStorage.getItem('pgNum') || 0;
 
 next.on('click', () =>{
   event.preventDefault();
@@ -31,12 +31,15 @@ deleteBtn.on('click', (event) => {
  * @param {number} pageNum
  */
 function renderPage(pageNum) {
-  localStorage.setItem("pgNum", pageNumber);
+  localStorage.setItem('pgNum', pageNum);
   console.log(pageNumber);
-  $.ajax({
-    method: 'GET',
-    url: '/business/' + pageNumber,
-  }).then((data) => {
-    console.log('worked');
+  $.get('/business/' + pageNum, function(data) {
+    window.location.replace('/business/' + pageNum);
+  // $.ajax({
+  //   method: 'GET',
+  //   url: '/business/' + pageNum,
+  // }).then((data) => {
+  //   console.log('worked');
   });
 }
+
