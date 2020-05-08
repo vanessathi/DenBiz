@@ -1,4 +1,4 @@
-
+'use strict';
 module.exports = function(sequelize, DataTypes) {
   const smallBis = sequelize.define('smallBis', {
     name: {

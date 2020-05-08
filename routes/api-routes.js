@@ -16,29 +16,28 @@ module.exports = function(app) {
       res.json(smallBusiness);
     });
   });
-  app.get('/api/business', (req, res) => {
-    const pgNumber = req.params;
-    console.log(req.params);
+  app.get('/api/business/:pg', (req, res) => {
     db.smallBis.findAll()
         .then(function(data) {
           const results = [];
-          for (let i = 1 * pgNumber; i < (12 * pgNumber) + 11; i++) {
-            results.push(data[i].dataValues);
-            if (i === data.length) break;
+          let pgNumber = (parseInt(req.params.pg) * 12) -1;
+          for (let i = 0; i < 12; i++) {
+            if (pgNumber === data.length) break;
+            results.push(data[pgNumber].dataValues);
+            pgNumber ++;
           }
-          console.log(results);
           res.render('business', {key: results});
         });
   });
 
-  // app.delete('api/smallbusiness/:id', function(req, res) {
-  //   db.smallbusiness.destroy({
-  //     where: {
-  //       id: req.params.id,
-  //     },
-  //   }).then(function(dbsmallbusiness) {
-  //     res.json(dbsmallbusiness);
-  //   });
-  // });
+  app.delete('/api/smallbusiness/:id', function(req, res) {
+    db.smallBis.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(function(dbsmallbusiness) {
+      res.json(dbsmallbusiness);
+    });
+  });
 };
 
