@@ -29,21 +29,34 @@
       <div class="bg-white p-4 rounded shadow">
 
         <!-- Custom rounded search bars with input group -->
-        <form action="submit">
+        <form id="submit"> 
           <div class="input-group mb-4 border rounded-pill p-1">
             <div class="input-group-prepend border-0">
               <button id="searchform" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
             </div>
-            <input type="search" placeholder="Find restaurants, bakeries, home repair services.." aria-describedby="searchform" id = "search" class="form-control bg-none border-0">
+            <input type="search" placeholder="Find restaurants, bakeries, home repair services.." aria-describedby="searchform" id="search" class="form-control bg-none border-0">
           </div>
-        </form>
-     
+        </form>  
 
       </div>
     </div>
   </div>
 </div>
-  
+
+{{!-- new section --}}
+ <div class="container">
+  <div class="row border-0 my-4">
+    <div class="col-lg-8 mx-auto">
+      <h5 class="font-weight-light mb-4 font-italic text-white">testing: map results</h5>
+      <div class="bg-white p-4 rounded shadow">
+
+          <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{!-- new section --}}
 <div class="container">
 <div class="row border-0 my-5">
     <div class="col-lg-8 mx-auto">
