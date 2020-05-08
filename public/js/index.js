@@ -46,6 +46,10 @@ function geolocation(location, city) {
  * @param {number} lng
  */
 function initMap(lat, lng) {
+  const script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCEFrSt4UG74zSBehlkzl7bMYQdOUBEhkM&callback=initMap';
+  script.defer = true;
+  script.async = true;
   const coords = {
     lat: parseFloat(lat),
     lng: parseFloat(lng),
@@ -55,14 +59,4 @@ function initMap(lat, lng) {
     zoom: 12,
     center: coords,
   });
-  // const marker = new google.maps.Marker({
-  //   position: coords,
-  //   map: map,
-  // });
-  // const infoWindow = new google.maps.InfoWindow({
-  //   content: 'name',
-  // });
-  // marker.addListener('click', function() {
-  //   infoWindow.open(map, marker);
-  // });
 }
