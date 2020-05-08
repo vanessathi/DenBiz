@@ -138,4 +138,29 @@ function initMap(lat, lng) {
       },
     ],
   });
+  const styleControl = document.getElementById('style-selector-control');
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+  // Apply new JSON when the user chooses to hide/show features.
+  document.getElementById('hide-poi').addEventListener('click', function() {
+    map.setOptions({styles: styles['hide']});
+  });
+  document.getElementById('show-poi').addEventListener('click', function() {
+    map.setOptions({styles: styles['default']});
+  });
 }
+
+const styles = {
+  default: null,
+  hide: [
+    {
+      featureType: 'poi.business',
+      stylers: [{visibility: 'off'}],
+    },
+    {
+      featureType: 'transit',
+      elementType: 'labels.icon',
+      stylers: [{visibility: 'off'}],
+    },
+  ],
+};
+
