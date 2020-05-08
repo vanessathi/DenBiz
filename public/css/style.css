@@ -208,7 +208,22 @@ a.exploreLink  {
 #map {
   width: 400px;
   height: 400px;
-  background-color: grey;
+  padding: 0;
+  align-content: center;
+}
+.map-control {
+  background-color: fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px rgba(33,33,33,0.4);
+  margin: 10px;
+  display: none;
+}
+#map .map-control {
+  display: block;
+}
+.selector-control {
+  line-height: 30px;
+  vertical-align: baseline;
 }
 
 /*FOOTER*/

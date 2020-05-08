@@ -1,4 +1,4 @@
-# Mile High
+# DENBIZ
 
 ## Overview
 This full-stack web application was a group collaboration of design and functioning using the MVC paradigm and our own server-side API. 

@@ -43,34 +43,23 @@
     <a class="exploreLink" href="/business">View all businesses instead</a>
   </div>
 
-  {{!-- <div class="row border-0 my-4">
-    <div class="col-lg-8 mx-auto">
-      <h5 class="font-weight-light mb-4 font-italic text-white">explore denver small businesses</h5>
-      <div class="bg-white p-4 rounded shadow">
-
-        <!-- Custom rounded search bars with input group -->
-        <form id="submit"> 
-          <div class="input-group mb-4 border rounded-pill p-1">
-            <div class="input-group-prepend border-0">
-              <button id="searchform" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
-            </div>
-            <input type="search" placeholder="Find restaurants, bakeries, home repair services.." aria-describedby="searchform" id="search" class="form-control bg-none border-0">
-          </div>
-        </form>  
-
-      </div>
-    </div>
-  </div> --}}
-</div>
-
-{{!-- new section --}}
+{{!-- new MAP section --}}
  <div class="container">
   <div class="row border-0 my-4">
     <div class="col-lg-8 mx-auto">
-      <h5 class="font-weight-light mb-4 font-italic text-white">testing: map results</h5>
+      <h5 class="font-weight-light mb-4 font-italic text-white">Search Results</h5>
       <div class="bg-white p-4 rounded shadow">
 
-          <div id="map"></div>
+<div id="style-selector-control" class="map-control">
+      <input type="radio" name="show-hide" id="hide-poi"
+          class="selector-control">
+      <label for="hide-poi">Hide</label>
+      <input type="radio" name="show-hide" id="show-poi"
+          class="selector-control" checked="checked">
+      <label for="show-poi">Show</label>
+    </div>
+    <div id="map"></div>
+         
       </div>
     </div>
   </div>
@@ -80,7 +69,7 @@
 <div class="container">
   <div class="row border-0 my-5">
     <div class="col-lg-8 mx-auto spotlightBiz">
-      <h2 class="">Small business spotlight</h2>
+      <h2 class="">Small Business Spotlight</h2>
       <div class="bg-white p-5 rounded shadow">
         <!-- business of the week -->
         <div class="businessOfTheWeek card border-info mb-3 shadow">
@@ -92,8 +81,8 @@
           <div class="card-body">
             <h6 class="card-title">Business Classification: {{category}} </h6>
             <p class="card-text">About {{name}}:</p>
-            <p class="card-text">{{companyDescription}}</p>
-            <p class="card-text"><small class="text-muted">Last updated: May 09 2020</small></p>
+            <p class="card-text">{{description}}</p>
+            <p class="card-text"><small class="text-muted">Last updated: May 08 2020</small></p>
           </div>
           <div class="card-footer bg-transparent border-info">
             <div class="container">
