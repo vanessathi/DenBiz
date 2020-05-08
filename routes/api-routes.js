@@ -16,19 +16,19 @@ module.exports = function(app) {
       res.json(smallBusiness);
     });
   });
-  app.get('/api/business/:pg', (req, res) => {
-    db.smallBis.findAll()
-        .then(function(data) {
-          const results = [];
-          let pgNumber = (parseInt(req.params.pg) * 12) -1;
-          for (let i = 0; i < 12; i++) {
-            if (pgNumber === data.length) break;
-            results.push(data[pgNumber].dataValues);
-            pgNumber ++;
-          }
-          res.render('business', {key: results});
-        });
-  });
+  // app.get('/api/business/:pg', (req, res) => {
+  //   db.smallBis.findAll()
+  //       .then(function(data) {
+  //         const results = [];
+  //         let pgNumber = (parseInt(req.params.pg) * 12) -1;
+  //         for (let i = 0; i < 12; i++) {
+  //           if (pgNumber === data.length) break;
+  //           results.push(data[pgNumber].dataValues);
+  //           pgNumber ++;
+  //         }
+  //         res.render('business', {key: results});
+  //       });
+  // });
 
   app.delete('/api/smallbusiness/:id', function(req, res) {
     db.smallBis.destroy({
