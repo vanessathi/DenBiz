@@ -15,13 +15,15 @@ module.exports = function(app) {
   app.get('/registration', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/partials/registration.html'));
   });
-  app.get('/business', (req, res) => {
+  app.get('/business/:pg', (req, res) => {
     db.smallBis.findAll()
         .then(function(data) {
           const results = [];
+          let pgNumber = (parseInt(req.params.pg) * 12);
           for (let i = 0; i < 12; i++) {
-            results.push(data[i].dataValues);
-            if (i == data.length - 1) break;
+            if (pgNumber >= data.length) break;
+            results.push(data[pgNumber].dataValues);
+            pgNumber ++;
           }
           res.render('business', {key: results});
         });
