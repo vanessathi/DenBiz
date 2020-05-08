@@ -1,5 +1,3 @@
-import { ConnectionRefusedError } from "sequelize/types";
-
 const search = $('#search');
 $('#searchform').on('click', handleFormSubmit);
 
@@ -23,7 +21,7 @@ function handleFormSubmit(event) {
       geolocation(data.address, data.city);
     });
   };
-}
+};
 
 /**
  * A geolocation converter from address to lat long
@@ -31,37 +29,40 @@ function handleFormSubmit(event) {
  * @param {string} city
 */
 function geolocation(location, city) {
-  const queryURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + ',+' + city + ',+CO&key= AIzaSyA4KKZm2o6ZYDa0oTYJUqrjw8akzbS62Yk';
+  const queryURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + ',+' + city + ',+CO&key=AIzaSyA4KKZm2o6ZYDa0oTYJUqrjw8akzbS62Yk';
   $.ajax({
     url: queryURL,
     method: 'GET',
   }).then(function(response) {
     const lat = (response.results[0].geometry.location.lat);
-    const long = (response.results[0].geometry.location.long);
-    initMap(lat, long);
+    const lng = (response.results[0].geometry.location.lng);
+    initMap(lat, lng);
   });
 }
 
 /**
  * A callback function to create map
  * @param {number} lat
- * @param {number} long
+ * @param {number} lng
  */
-function initMap(lat, long) {
-  const coords = {lat, long};
+function initMap(lat, lng) {
+  const coords = {
+    lat: parseFloat(lat),
+    lng: parseFloat(lng),
+  };
   // Denver Coords: 39.7392° N, 104.9903° W - Use for center if we use a marker
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
-    center: {lat: 39.7392, long: 104.9903},
+    center: coords,
   });
-  const marker = new google.maps.Marker({
-    position: coords,
-    map: map,
-  });
-  const infoWindow = new google.maps.InfoWindow({
-    content: 'name',
-  });
-  marker.addListener('click', function() {
-    infoWindow.open(map, marker);
-  });
+  // const marker = new google.maps.Marker({
+  //   position: coords,
+  //   map: map,
+  // });
+  // const infoWindow = new google.maps.InfoWindow({
+  //   content: 'name',
+  // });
+  // marker.addListener('click', function() {
+  //   infoWindow.open(map, marker);
+  // });
 }
